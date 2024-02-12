@@ -6,3 +6,5 @@ This is a simplified version of the financial dashboard that has:
 - A login page.
 - Dashboard pages that are protected by authentication.
 - The ability for users to add, edit, and delete invoices.
+
+![alt text](public\opengraph-image.png/?raw=true)
