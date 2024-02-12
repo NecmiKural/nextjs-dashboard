@@ -22,17 +22,18 @@ export async function fetchRevenue() {
   try {
     // What happens if one data request is slower than all the others?, it will make us to wait and take whole page loading. Lets test:
 
-    // Artificially delay a response for demo purposes.
+    //TODO: Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    // console.log('Fetching revenue data...');
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log('Fetching revenue data...');
+    await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
-    // console.log('Data fetch completed after 3 seconds.');
+    console.log('Data fetch completed after 3 seconds.');
 
-    // so with dynamic rendering, your application is only as fast as your slowest data fetch.
+    // so with dynamic rendering, your application is only as fast as your slowest data fetch. 
+    // We should stream and this allows the user to see and interact with parts of the page without waiting for all the data to load before any UI can be shown to the user.
 
     return data.rows;
   } catch (error) {
