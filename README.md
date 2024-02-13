@@ -9,4 +9,4 @@ This is a simplified version of the financial dashboard that has:
 
 You can check application here: https://nextjs-dashboard-eight-eta-61.vercel.app/
 
-![alt text](public/opengraph-image.png/?raw=true)
+![alt text](app/opengraph-image.png/?raw=true)
